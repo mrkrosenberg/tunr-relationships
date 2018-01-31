@@ -13,6 +13,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 
+import { ArtistsService } from './artists/artists.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,7 @@ import { AboutComponent } from './about/about.component';
     SongsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ArtistsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

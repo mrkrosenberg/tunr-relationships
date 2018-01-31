@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute }   from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { ArtistsService } from '../artists.service';
 
 @Component({
@@ -18,10 +18,11 @@ export class ArtistShowComponent implements OnInit {
 
   ngOnInit() {
   	this.route.params.forEach( param => {
-  		this.artistsService.getOneArtist(param.id)
-  		.subscribe(response => {
+			this.artistsService.getOneArtist(param.id)
+  		.subscribe((response) => {
   			console.log(response.json());
-  			this.oneArtist = response.json();
+				this.oneArtist = response.json();
+				console.log(this.oneArtist);
   		});
   	});
   }
